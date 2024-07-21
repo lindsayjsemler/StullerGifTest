@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:local="clr-namespace:StullerGifTest"
+    BindingContext="StullerGifTest.DetailGifViewModel"
+    x:Class="StullerGifTest.Views.DetailGifModal">
+
+    <StackLayout>
+        <Button
+            Text="X"
+            Command="{Binding PopModelCommand}"
+            BackgroundColor="LightBlue"
+            TextColor="Black"
+            HorizontalOptions="Start"
+            HeightRequest="40"
+            WidthRequest="40"
+            Margin="5"/>
+
+        <ffimageloading:SvgCachedImage 
+            x:Name="GifImage" 
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            WidthRequest="200"
+            HeightRequest="200"
+            Source="{Binding gifModel.GifImageSource}" />
+
+        <!-- <Image x:Name="GifImage"
+           Source="{Binding gifModel.GifImageSource}" 
+           IsAnimationPlaying="True"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"/> -->
+
+        <Button
+            Margin="10,10"
+            x:Name="CopyBtn"
+            BackgroundColor="LightBlue"
+            Command="{Binding CopyLink}"
+            CommandParameter="{Binding gifModel.URLLink}"
+            HeightRequest="50"
+            IsEnabled="true"
+            Text="Copy Link"
+            TextColor="Black"
+            VerticalOptions="Center"
+            WidthRequest="100" />
+
+
+    </StackLayout>
+
+
+</ContentPage>
+
