@@ -1,8 +1,8 @@
 # StullerGifTest
 
-*Disclaimer* 
+* *Disclaimer* *
 This is and Android only app (decided to do this to save time, especially since iOS requires a multipude of more resources and I "thought" I would save time. In hindsight, I should go back start over, make this and iOS only app and copy over all the assets that I need, since using the commented code in DetailGifModel.xaml the line where I put the Image with the models GifImageSource.) Ideally if I had the time (and if I cannot sleept tonight I may try to recrete the app and change it to an iOS App instead of an Android. Note: Due to food poisoning and a fun trip to the hospital for a total of 31 hours. I did not have enough time to add in the Apple SqlServer Database that I had hoped. I have never worked with a Database using a mac before, but did not have access to a virtual machine or Windows. (I know this was bonus points, but I was hoping I could get that done enter in all the information in the database and not have any hard coded Lists since that is a pet peeve and big no no for my personal standards! Here is a link to a thread that is one of many demonstrating the issue with this version fo Xamarin.Forms, gifs, and Animation: https://stackoverflow.com/questions/61102724/xamarin-forms-image-gif-animation-doesnt-play-on-android
-*End Disclaimer*
+* *End Disclaimer* *
 
 INSTRUCTIONS FOR SETTING UP YOUR COMPUTER TO RUN THE APP:
 Details on Version for my personal Computer MAC iOS, .NetStandardLibrary, Xamarin.Forms, nuget packages, xCode, AndroidStudio, and Android Emulator, warning this may not compile if you are on a newer versin of an iOS or .Net that is more up to date aka a development laptop and has only been developed on a MAC (For mobile development and Maui development you need a MAC to release/update anything to the Apple Store)
