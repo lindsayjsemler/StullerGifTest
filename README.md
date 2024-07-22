@@ -14,7 +14,7 @@ Details on Version for my personal Computer MAC iOS, .NetStandardLibrary, Xamari
     5.) Xcode v 13.1 (13A1030d)
     6.) Android Studio Flamingo v 2022.2.1 Patch 2
     7.) In order to add an Adroid Emulator to test, in Visual Studio you will need to go to Tools -> SDK Locations -> Android and insteall Android 12.0 S which is API 31 and the version I used to test the entire App
-  8.) download the cod from github located here: https://github.com/lindsayjsemler/StullerGifTest.git
+  8.) DOWNLOAD THE CODE FROM GITHUB LOCATED HERE: https://github.com/lindsayjsemler/StullerGifTest.git
 
 
 OVERALL DESIGN OF THE APP AND MAJOR DESIGN DECISIONS:
@@ -24,21 +24,23 @@ OVERALL DESIGN OF THE APP AND MAJOR DESIGN DECISIONS:
     4.) View are the files that deal directly with the xaml files with is the layout of the screen and deals with the binding of important data between the xaml, view, and viewmodel.
     5.) The model is primarily the information that is retrieved or updated from the server and stored in the database, tehse values change depending on the UI interaction on the front end of the App.
 
-Division of Screens
+DIVISION OF SCREENS WHILE MAINTAINING THE MVVM PATTERN
     1.) The MainPage, is the screen with the title, search bar, and images of gifs. Each of the gifs are click able and will lead to a DetailGiveView where there is an exit button, the animation (currently not working, but still working on this), and the Copy Link button which copies the link of the gif and you can paste it system wide to any other app such as notes, messages, word docs, etc. 
     
     This I decided to have a CollectionView for the stil images of the gifs that I got from giphy I  started with 5 hard-coded gifs, and it will allow a max of 10 gis to be show at a time. The Search bar you can type (case insensitive) for the name of the gi (under the inage in the main view) or the URL of the gif itself, this will update the CollectionView with the results of the search
     
-    If you click on an image of a gif, you are navigated to the detailed page
+    If you click on an image of a gif, you are navigated to the DetailGiFView page
     
-    2.) The DetailGiveView is a modal (a screen that is a pop up on top of a main screen (one that fills the entire mobiel app). This has an X button to close, a currently missing animation of the gift, and a button to copy to the system the url link for the gif you can paste anywhere in the computer
+    2.) The DetailGiFView is a modal (a screen that is a pop up on top of a main screen (one that fills the entire mobiel app). This has an X button to close, a currently missing animation of the gift, and a button to copy to the system the url link for the gif you can paste anywhere in the computer
     
     3.) The App classes are there as a default enterance to the app for both Android and iOS.
     
     4.) THe other portion to take note of is any images, gifs, or mp4's are locted in the Resources director of Android, iOS would have a similar layout becaus ethey are dependent on the type of mobile device. 
 
+ADDITIONAL NOTES:
 I would be happy to discuss more details of design decisions. As of yet I still have some commented code so you could see the different options I tried besides the Image Animation that currently works in more recent versions fo Xamarin.Forms and also Maui. I am going to try to restart the app in iOS and Android, just to see if it is indeed an Android only problem and just copy over the assets and code as needed. I will also have time to clean up the code, write more about the design decisionsk, and add more comments tomorrow morning. 
 
+TODO UPDATES BEFORE TOMORROW, WILL DELIVER BEFORE 10AM:
 I will send an updated email when this is complete, and hopefully the iOS version will work and I can just switch to iOS development, limit the simulator options, and remove the Android implementation unless you would like to see both present (that might be a good way to see my troubleshooting and problem solving skills when running into something unecxpected.
 
 Thank you!
