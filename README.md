@@ -1,7 +1,7 @@
 # StullerGifTest
 
 * *Disclaimer* *
-This is and Android only app (decided to do this to save time, especially since iOS requires a multipude of more resources and I "thought" I would save time. In hindsight, I should go back start over, make this and iOS only app and copy over all the assets that I need, since using the commented code in DetailGifModel.xaml the line where I put the Image with the models GifImageSource.) Ideally if I had the time (and if I cannot sleept tonight I may try to recrete the app and change it to an iOS App instead of an Android. Note: Due to food poisoning and a fun trip to the hospital for a total of 31 hours. I did not have enough time to add in the Apple SqlServer Database that I had hoped. I have never worked with a Database using a mac before, but did not have access to a virtual machine or Windows. (I know this was bonus points, but I was hoping I could get that done enter in all the information in the database and not have any hard coded Lists since that is a pet peeve and big no no for my personal standards! Here is a link to a thread that is one of many demonstrating the issue with this version fo Xamarin.Forms, gifs, and Animation: https://stackoverflow.com/questions/61102724/xamarin-forms-image-gif-animation-doesnt-play-on-android
+This is and Android only app (decided to do this to save time, especially since iOS required a version of xCode that would not work on my computer. I left in the Animation code currently commented out and notated.) Ideally if I had the time I did not have enough time to add in the Apple SqlServer Database that I had hoped. Here is a link to a thread that is one of many demonstrating the issue with this version fo Xamarin.Forms, gifs, and Animation: https://stackoverflow.com/questions/61102724/xamarin-forms-image-gif-animation-doesnt-play-on-android
 * *End Disclaimer* *
 
 INSTRUCTIONS FOR SETTING UP YOUR COMPUTER TO RUN THE APP:
@@ -36,12 +36,7 @@ DIVISION OF SCREENS WHILE MAINTAINING THE MVVM PATTERN
     3.) The App classes are there as a default enterance to the app for both Android and iOS.
     
     4.) THe other portion to take note of is any images, gifs, or mp4's are locted in the Resources director of Android, iOS would have a similar layout becaus ethey are dependent on the type of mobile device. 
-
-ADDITIONAL NOTES:
-I would be happy to discuss more details of design decisions. As of yet I still have some commented code so you could see the different options I tried besides the Image Animation that currently works in more recent versions fo Xamarin.Forms and also Maui. I am going to try to restart the app in iOS and Android, just to see if it is indeed an Android only problem and just copy over the assets and code as needed. I will also have time to clean up the code, write more about the design decisionsk, and add more comments tomorrow morning. 
-
-TODO UPDATES BEFORE TOMORROW, WILL DELIVER BEFORE 10AM:
-I will send an updated email when this is complete, and hopefully the iOS version will work and I can just switch to iOS development, limit the simulator options, and remove the Android implementation unless you would like to see both present (that might be a good way to see my troubleshooting and problem solving skills when running into something unecxpected.
+    5.) I have a ViewModelBase class that both MainPageViewModel and DetailGifViewModel Derive from and this implements the IPropertyChanged values for any changes that the user makes that need to be updated between the view/xaml and model, this si deprecated in Maui is set up so this class will not be needed in the future.
 
 Thank you!
 Lindsay Semler
@@ -50,6 +45,6 @@ Lindsay Semler
 
 Note I did try several other options to get gifs working in the app, however all are messy design an bandaid fixes for the Xamarin.Forms know issue as documented here: https://stackoverflow.com/questions/61102724/xamarin-forms-image-gif-animation-doesnt-play-on-android
 
-Options I tried were CrossMediaManager, using Webview with the URL to Animate in screen, FFTImageLoading, and approx. 5 other trials to fix this issue. I am going to try to start from scratch and build it for iOS tomorrow morning and see if I can get it to work, if I can I will update this file and the code as well. 
+Options I tried were CrossMediaManager, using Webview with the URL to Animate in screen, FFTImageLoading, and approx. 5 other trials to fix this issue. I also tried to switch to an iOS implementation, however my xCode version is several years out of date and imcompatible with iOS development on my machine.
 
 
