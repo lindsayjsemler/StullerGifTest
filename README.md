@@ -18,24 +18,24 @@ Details on Version for my personal Computer MAC iOS, .NetStandardLibrary, Xamari
 
 
 OVERALL DESIGN OF THE APP AND MAJOR DESIGN DECISIONS:
-1.) Xamarin/Maui follows a strict MVVM architetural pattern so I devided my modules up for my MainPage and DetailGifPage by separating out the Model, View, and View Models.
-2.)For the GifModel, I used this throughout the entire app and it had all the information needed for my Gif files including the SearchName, URL, GifImageSource, and PngImageSource. These were key for both the search functionality as well asl displaying the gif files on the screen
-3.) All of the View Model are the updating of User interactions on the views that may udpate information on the models, and also changes tothe models that may update the views
-4.) View are the files that deal directly with the xaml files with is the layout of the screen and deals with the binding of important data between the xaml, view, and viewmodel.
-5.) The model is primarily the information that is retrieved or updated from the server and stored in the database, tehse values change depending on the UI interaction on the front end of the App.
+    1.) Xamarin/Maui follows a strict MVVM architetural pattern so I devided my modules up for my MainPage and DetailGifPage by separating out the Model, View, and View Models.
+    2.)For the GifModel, I used this throughout the entire app and it had all the information needed for my Gif files including the SearchName, URL, GifImageSource, and PngImageSource. These were key for both the search functionality as well asl displaying the gif files on the screen
+    3.) All of the View Model are the updating of User interactions on the views that may udpate information on the models, and also changes tothe models that may update the views
+    4.) View are the files that deal directly with the xaml files with is the layout of the screen and deals with the binding of important data between the xaml, view, and viewmodel.
+    5.) The model is primarily the information that is retrieved or updated from the server and stored in the database, tehse values change depending on the UI interaction on the front end of the App.
 
 Division of Screens
-1.) The MainPage, is the screen with the title, search bar, and images of gifs. Each of the gifs are click able and will lead to a DetailGiveView where there is an exit button, the animation (currently not working, but still working on this), and the Copy Link button which copies the link of the gif and you can paste it system wide to any other app such as notes, messages, word docs, etc. 
-
-This I decided to have a CollectionView for the stil images of the gifs that I got from giphy I  started with 5 hard-coded gifs, and it will allow a max of 10 gis to be show at a time. The Search bar you can type (case insensitive) for the name of the gi (under the inage in the main view) or the URL of the gif itself, this will update the CollectionView with the results of the search
-
-If you click on an image of a gif, you are navigated to the detailed page
-
-2.) The DetailGiveView is a modal (a screen that is a pop up on top of a main screen (one that fills the entire mobiel app). This has an X button to close, a currently missing animation of the gift, and a button to copy to the system the url link for the gif you can paste anywhere in the computer
-
-3.) The App classes are there as a default enterance to the app for both Android and iOS.
-
-4.) THe other portion to take note of is any images, gifs, or mp4's are locted in the Resources director of Android, iOS would have a similar layout becaus ethey are dependent on the type of mobile device. 
+    1.) The MainPage, is the screen with the title, search bar, and images of gifs. Each of the gifs are click able and will lead to a DetailGiveView where there is an exit button, the animation (currently not working, but still working on this), and the Copy Link button which copies the link of the gif and you can paste it system wide to any other app such as notes, messages, word docs, etc. 
+    
+    This I decided to have a CollectionView for the stil images of the gifs that I got from giphy I  started with 5 hard-coded gifs, and it will allow a max of 10 gis to be show at a time. The Search bar you can type (case insensitive) for the name of the gi (under the inage in the main view) or the URL of the gif itself, this will update the CollectionView with the results of the search
+    
+    If you click on an image of a gif, you are navigated to the detailed page
+    
+    2.) The DetailGiveView is a modal (a screen that is a pop up on top of a main screen (one that fills the entire mobiel app). This has an X button to close, a currently missing animation of the gift, and a button to copy to the system the url link for the gif you can paste anywhere in the computer
+    
+    3.) The App classes are there as a default enterance to the app for both Android and iOS.
+    
+    4.) THe other portion to take note of is any images, gifs, or mp4's are locted in the Resources director of Android, iOS would have a similar layout becaus ethey are dependent on the type of mobile device. 
 
 I would be happy to discuss more details of design decisions. As of yet I still have some commented code so you could see the different options I tried besides the Image Animation that currently works in more recent versions fo Xamarin.Forms and also Maui. I am going to try to restart the app in iOS and Android, just to see if it is indeed an Android only problem and just copy over the assets and code as needed. I will also have time to clean up the code, write more about the design decisionsk, and add more comments tomorrow morning. 
 
