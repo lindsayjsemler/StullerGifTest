@@ -18,13 +18,15 @@ Details on Version for my personal Computer MAC iOS, .NetStandardLibrary, Xamari
 
 
 OVERALL DESIGN OF THE APP AND MAJOR DESIGN DECISIONS:
+
     1.) Xamarin/Maui follows a strict MVVM architetural pattern so I devided my modules up for my MainPage and DetailGifPage by separating out the Model, View, and View Models.
     2.)For the GifModel, I used this throughout the entire app and it had all the information needed for my Gif files including the SearchName, URL, GifImageSource, and PngImageSource. These were key for both the search functionality as well asl displaying the gif files on the screen
     3.) All of the View Model are the updating of User interactions on the views that may udpate information on the models, and also changes tothe models that may update the views
     4.) View are the files that deal directly with the xaml files with is the layout of the screen and deals with the binding of important data between the xaml, view, and viewmodel.
     5.) The model is primarily the information that is retrieved or updated from the server and stored in the database, tehse values change depending on the UI interaction on the front end of the App.
 
-DIVISION OF SCREENS WHILE MAINTAINING THE MVVM PATTERN
+DIVISION OF SCREENS WHILE MAINTAINING THE MVVM PATTERN:
+
     1.) The MainPage, is the screen with the title, search bar, and images of gifs. Each of the gifs are click able and will lead to a DetailGiveView where there is an exit button, the animation (currently not working, but still working on this), and the Copy Link button which copies the link of the gif and you can paste it system wide to any other app such as notes, messages, word docs, etc. 
     
     This I decided to have a CollectionView for the stil images of the gifs that I got from giphy I  started with 5 hard-coded gifs, and it will allow a max of 10 gis to be show at a time. The Search bar you can type (case insensitive) for the name of the gi (under the inage in the main view) or the URL of the gif itself, this will update the CollectionView with the results of the search
